@@ -6,7 +6,7 @@ repo1_path = '/home/maram/Github/Common'
 repo2_path = '/home/maram/Github/Test/Common'
 
 # Set the delay in seconds between sync operations
-delay = 300  # 5 minutes
+delay = 60  # 5 minutes
 
 def sync_repos():
     # Change directory to repo1 and pull changes
