@@ -25,7 +25,7 @@ jobs:
           echo "Running the submodule update script"
           git submodule init
           git submodule update --remote
-          cd Test
+          cd Common
           git remote set-url origin "https://${{ secrets.PAT_TOKEN }}@github.com/muram-105/Common.git"
           git add .
           git commit -m "Update submodule to reflect main repository changes"
