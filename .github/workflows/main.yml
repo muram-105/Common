@@ -3,24 +3,26 @@ name: Update Submodules
 on:
   push:
     branches:
-      - 16.0
+      - main
 
 jobs:
-  update-submodules:
+  build:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Update Submodules
-        run: |
-          git submodule sync
-          git submodule update --init --recursive
-          cd Test/Common
-          git checkout 16.0
-          git pull origin 16.0
-          git add .
-          git commit -m "Updated submodule: $(git rev-parse HEAD)"
-          git push origin 16.0
+    - name: Initialize and update submodules
+      run: |
+        git submodule sync
+        git submodule update --init --recursive
 
+    - name: Run submodule update script
+      run: |
+        cd Test/Common
+        git checkout 16.0
+        git pull origin 16.0
+        git add .
+        git commit -m "Updated submodule: $(git rev-parse HEAD)"
+        git push origin 16.0
