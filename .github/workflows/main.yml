@@ -17,6 +17,9 @@ jobs:
         run: |
           git submodule sync
           git submodule update --init --recursive
-          git submodule foreach 'git checkout 16.0 && git pull origin 16.0'
-          git commit -am "Updated submodules"
+          cd Test/Common
+          git checkout 16.0
+          git pull origin 16.0
+          git commit -am "Updated submodule: ${{ github.sha }}"
           git push origin 16.0
+
