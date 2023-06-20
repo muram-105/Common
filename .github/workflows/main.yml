@@ -13,18 +13,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set Git user
-        run: |
-          git config user.email "muram8700@gmail.com"
-          git config user.name "muram105"
-
       - name: Update submodule
         run: |
           echo "Running the submodule update script"
           git submodule init
           git submodule update --remote
-          git add .
-          git commit -m "Update submodule to reflect main repository changes"
+          git diff-index --quiet HEAD || git commit -am "Update submodule to reflect main repository changes"
           git push
 
       - name: Log completion
