@@ -3,7 +3,7 @@ name: Update Submodule
 on:
   push:
     branches:
-      - 16.0
+      - main
 
 jobs:
   update:
@@ -24,7 +24,7 @@ jobs:
         run: |
           echo "Running the submodule update script"
           git submodule update --remote
-          cd Common @ 40cb722
+          cd /home/maram/Github/Test/Common  # Replace with the actual path to the submodule directory on your local machine
           git add .
           git commit -m "Update submodule"
           git push origin 16.0
