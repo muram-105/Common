@@ -20,13 +20,13 @@ jobs:
 
       - name: Update submodule
         env:
-          PAT_TOKEN: ${{ secrets.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 }}
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           echo "Running the submodule update script"
           git submodule init
           git submodule update --remote
-          cd submodule_directory
-          git remote set-url origin "https://${{ secrets.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 }}@github.com/muram-105/Common.git"
+          cd Test
+          git remote set-url origin "https://${{ secrets.PAT_TOKEN }}@github.com/muram-105/Common.git"
           git add .
           git commit -m "Update submodule to reflect main repository changes"
           git push
