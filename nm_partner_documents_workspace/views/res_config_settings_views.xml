@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.treatment.unit</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="50"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form" />
+            <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="Treatment Unit" string="Treatment Unit" data-key="nm_reception_treatment_unit" >
+                        <h2>Treatment Unit</h2>
+                        <div class="row mt16 o_settings_container" id="partner_workspace">
+                            <div id="partner_workspace_id" class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane">
+                                    <label for="partner_workspace_id"/>
+                                    <div class="text-muted">
+                                        <field name="partner_workspace_id"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+</odoo>
