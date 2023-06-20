@@ -23,13 +23,11 @@ jobs:
           PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           echo "Running the submodule update script"
-          git submodule init
-          git submodule update --remote
+          git Common update --remote
           cd Common
-          git remote set-url origin "https://${{ secrets.PAT_TOKEN }}@github.com/muram-105/Common.git"
           git add .
-          git commit -m "Update submodule to reflect main repository changes"
-          git push
+          git commit -m "Update submodule"
+          git push origin HEAD:main
 
       - name: Log completion
         run: echo "Submodule update script completed"
