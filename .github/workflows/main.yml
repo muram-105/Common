@@ -1,4 +1,4 @@
-name: Sync Submodules
+name: Update Submodules
 
 on:
   push:
@@ -6,23 +6,17 @@ on:
       - 16.0
 
 jobs:
-  sync:
+  update-submodules:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set Git user
-        run: |
-          git config user.email "muram8700@gmail.com"
-          git config user.name "muram105"
-
-      - name: Sync submodules
+      - name: Update Submodules
         run: |
           git submodule sync
           git submodule update --init --recursive
           git submodule foreach 'git checkout 16.0 && git pull origin 16.0'
-
-      - name: Log completion
-        run: echo "Submodule synchronization completed"
+          git commit -am "Updated submodules"
+          git push origin 16.0
