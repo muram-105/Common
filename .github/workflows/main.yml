@@ -18,11 +18,15 @@ jobs:
         git submodule sync
         git submodule update --init --recursive
 
-    - name: Run submodule update script
+    - name: Update submodule to the latest commit
       run: |
         cd Test/Common
-        git checkout 16.0
-        git pull origin 16.0
+        git checkout main
+        git pull origin main
+
+    - name: Commit and push updated submodule
+      run: |
+        cd Test/Common
         git add .
-        git commit -m "Updated submodule: $(git rev-parse HEAD)"
-        git push origin 16.0
+        git commit -m "Update submodule to the latest commit"
+        git push origin main
