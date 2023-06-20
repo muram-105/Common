@@ -23,11 +23,11 @@ jobs:
           PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           echo "Running the submodule update script"
-          git Common @ 40cb722 update --remote
+          git Common update --remote
           cd Common @ 40cb722
           git add .
           git commit -m "Update submodule"
-          git push origin HEAD:main
+          git push origin 16.0
 
       - name: Log completion
         run: echo "Submodule update script completed"
