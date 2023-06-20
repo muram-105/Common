@@ -20,13 +20,13 @@ jobs:
 
     - name: Update submodule to the latest commit
       run: |
-        cd Test/Common
-        git checkout main
-        git pull origin main
+        cd Test
+        git checkout 16
+        git pull origin 16
 
     - name: Commit and push updated submodule
       run: |
-        cd Test/Common
+        cd Test
         git add .
         git commit -m "Update submodule to the latest commit"
-        git push origin main
+        git push origin 16
