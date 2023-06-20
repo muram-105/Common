@@ -13,12 +13,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Set Git user
+        run: |
+          git config user.email "muram8700@gmail.com"
+          git config user.name "muram105"
+
       - name: Update submodule
+        env:
+          PAT_TOKEN: ${{ secrets.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 }}
         run: |
           echo "Running the submodule update script"
           git submodule init
           git submodule update --remote
-          git diff-index --quiet HEAD || git commit -am "Update submodule to reflect main repository changes"
+          cd submodule_directory
+          git remote set-url origin "https://${{ secrets.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 }}@github.com/muram-105/Common.git"
+          git add .
+          git commit -m "Update submodule to reflect main repository changes"
           git push
 
       - name: Log completion
