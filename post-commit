@@ -1,4 +1,0 @@
-cd /home/maram/Github/Test
-git submodule update --remote
-git commit -am "Update submodule from common repository"
-git push
