@@ -1,3 +1,27 @@
+name: Sync Submodule
+
+on:
+  push:
+    branches:
+      - 16.0  # Adjust the branch name if needed
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Update submodule
+        run: |
+          git submodule update --init --recursive
+          git submodule update --remote
+          git commit -am "Update submodule from common repository"
+          git push
+
+
+
 # name: Update Submodules
 
 # on:
