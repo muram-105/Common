@@ -22,4 +22,5 @@ jobs:
           cd temp-repo
           git add .
           git commit -m "Sync changes from Repo A"
+          git remote set-url origin https://muram-105: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@github.com/muram-105/Test.git
           git push origin main  # Replace with the branch you want to update in Repo B
