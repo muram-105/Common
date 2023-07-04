@@ -15,7 +15,7 @@ jobs:
 
       - name: Push changes to Repo Test
         run: |
-          git config --global umuram-105 "GitHub Actions"
+          git config --global muram-105 "GitHub Actions"
           git config --global muram8700@hotmail.com "actions@github.com"
           git clone https://github.com/muram-105/Test.git temp-repo
           cp -R * temp-repo/
