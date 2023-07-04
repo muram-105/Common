@@ -1,0 +1,25 @@
+name: Sync Repos
+
+on:
+  push:
+    branches:
+      - '16.0'  # Replace with the branch you want to monitor for changes
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Repo Common
+        uses: actions/checkout@v2
+
+      - name: Push changes to Repo Test
+        run: |
+          git config --global umuram-105 "GitHub Actions"
+          git config --global muram8700@hotmail.com "actions@github.com"
+          git clone https://github.com/muram-105/Test.git temp-repo
+          cp -R * temp-repo/
+          cd temp-repo
+          git add .
+          git commit -m "Sync changes from Repo A"
+          git push origin main  # Replace with the branch you want to update in Repo B
