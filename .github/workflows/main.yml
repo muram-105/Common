@@ -1,28 +1,25 @@
-name: Sync Repos
+name: Sync Changes
 
 on:
   push:
     branches:
-      - '16.0'  # Replace with the branch you want to monitor for changes
+      - '16.0' # Modify this if your main branch has a different name
 
 jobs:
   sync:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out Repo Common
+      - name: Checkout primary repository
         uses: actions/checkout@v2
 
-      - name: Push changes to Repo Test
+      - name: Push changes to secondary repository
         env:
-          ACCESS_TOKEN: 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
+          COMMIT_MESSAGE: "Sync changes" # Set your desired commit message here
         run: |
           git config --global user.name "muram-105"
           git config --global user.email "muram8700@gmail.com"
-          git clone https://github.com/muram-105/Test.git temp-repo
-          cp -R * temp-repo/
-          cd temp-repo
+          git remote add Test https://github.com/muram-105/Test.git
           git add .
-          git commit -m "Sync changes from Repo A"
-          git remote set-url origin https://github.com/muram-105/Test.git
-          git push origin main  # Replace with the branch you want to update in Repo B
+          git commit -m "$COMMIT_MESSAGE"
+          git push Test HEAD:main
