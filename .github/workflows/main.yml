@@ -1,25 +1,22 @@
-name: Sync Changes
+name: Push to Test Submodule
 
 on:
   push:
     branches:
-      - '16.0' # Modify this if your main branch has a different name
+      - '16.0'
 
 jobs:
-  sync:
+  push:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout primary repository
+      - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Push changes to secondary repository
-        env:
-          COMMIT_MESSAGE: "Sync changes" # Set your desired commit message here
+      - name: Push changes to Test repository
         run: |
           git config --global user.name "muram-105"
           git config --global user.email "muram8700@gmail.com"
-          git remote add Test https://github.com/muram-105/Test.git
-          git add .
-          git commit -m "$COMMIT_MESSAGE"
-          git push Test HEAD:main
+          cd path/to/common/submodule # Replace with the actual path to your common submodule
+          git remote set-url origin https://github.com/muram-105/Test.git # Replace with the URL of your test repository
+          git push origin HEAD:main
