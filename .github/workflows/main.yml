@@ -3,7 +3,7 @@ name: Update Test Submodule
 on:
   push:
     branches:
-      - '16.0
+      - '16.0'
 
 jobs:
   update-test:
