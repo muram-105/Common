@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="0">
+		<record id="tax_po_10" model="account.tax.template">
+			<field name="sequence">1</field>
+			<field name="description">10%</field>
+			<field name="name">Purchase 10%</field>
+			<field name="active">False</field>
+			<field name="price_include" eval="0" />
+			<field name="amount">10</field>
+			<field name="amount_type">percent</field>
+			<field name="type_tax_use">purchase</field>
+			<field name="chart_template_id" ref="l10n_bh.l10nbh_chart_template" />
+			<field name="tax_group_id" ref="tax_group_basic" />
+			<field name="invoice_repartition_line_ids"
+				eval="[(5, 0, 0),
+            (0,0, {
+             'factor_percent': 100,
+                'repartition_type': 'base',
+                'tag_ids':[ref('tax_tag_BP10')]
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('l10n_me.account_account_template_purchase_dep'),
+                'tag_ids':[ref('tax_tag_10p')]
+            }),
+        ]" />
+			<field name="refund_repartition_line_ids"
+				eval="[(5, 0, 0),
+            (0,0, {
+             'factor_percent': 100,
+                'repartition_type': 'base',
+                'tag_ids':[ref('tax_tag_BP10m')]
+            }),
+            (0,0, {
+            'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('l10n_me.account_account_template_purchase_dep'),
+                'tag_ids':[ref('tax_tag_p10m')]
+                
+            }),
+        ]" />
+		</record>
+		
+		<record id="tax_po_0" model="account.tax.template">
+			<field name="sequence">1</field>
+			<field name="description">0%</field>
+			<field name="name">Purchase 0%</field>
+			<field name="active">False</field>
+			<field name="price_include" eval="0" />
+			<field name="amount">0</field>
+			<field name="amount_type">percent</field>
+			<field name="type_tax_use">purchase</field>
+			<field name="chart_template_id" ref="l10n_bh.l10nbh_chart_template" />
+			<field name="tax_group_id" ref="tax_group_basic" />
+			<field name="invoice_repartition_line_ids"
+				eval="[(5, 0, 0),
+            (0,0, {
+             'factor_percent': 100,
+                'repartition_type': 'base',
+                'tag_ids':[ref('tax_tag_BP0m')]
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('l10n_me.account_account_template_purchase_dep'),
+                'tag_ids':[ref('tax_tag_48')]
+            }),
+        ]" />
+			<field name="refund_repartition_line_ids"
+				eval="[(5, 0, 0),
+            (0,0, {
+             'factor_percent': 100,
+                'repartition_type': 'base',
+                'tag_ids':[ref('tax_tag_BP0')]
+            }),
+            (0,0, {
+            'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('l10n_me.account_account_template_purchase_dep'),
+                'tag_ids':[ref('tax_tag_47')]
+                
+            }),
+        ]" />
+		</record>
+
+
+		<record id="tax_so_10" model="account.tax.template">
+			<field name="sequence">1</field>
+			<field name="description">10%</field>
+			<field name="name">Sale 10%</field>
+			<field name="price_include" eval="0" />
+			<field name="amount">10</field>
+			<field name="amount_type">percent</field>
+			<field name="type_tax_use">sale</field>
+			<field name="active">False</field>
+			<field name="chart_template_id" ref="l10n_bh.l10nbh_chart_template" />
+			<field name="tax_group_id" ref="tax_group_basic" />
+			<field name="invoice_repartition_line_ids"
+				eval="[(5, 0, 0),
+            (0,0, {
+             'factor_percent': 100,
+                'repartition_type': 'base',
+                 'tag_ids':[ref('tax_tag_BS10m')]
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('l10n_me.account_account_template_sale'),
+                'tag_ids':[ref('tax_tag_s10_min')]
+            }),
+        ]" />
+			<field name="refund_repartition_line_ids"
+				eval="[(5, 0, 0),
+            (0,0, {
+             'factor_percent': 100,
+                'repartition_type': 'base',
+                  'tag_ids':[ref('tax_tag_BS10')]
+            }),
+            (0,0, {
+            'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('l10n_me.account_account_template_sale'),
+                'tag_ids':[ref('tax_tag_10s')]
+                
+            }),
+        ]" />
+		</record>
+
+
+		<record id="tax_so_0" model="account.tax.template">
+			<field name="sequence">10</field>
+			<field name="description">Sales 0%</field>
+			<field name="name">Sales 0%</field>
+			<field name="price_include" eval="0" />
+			<field name="amount">0</field>
+			<field name="amount_type">percent</field>
+			<field name="type_tax_use">sale</field>
+			<field name="active">False</field>
+			<field name="chart_template_id" ref="l10n_bh.l10nbh_chart_template" />
+			<field name="tax_group_id" ref="tax_group_local_sale" />
+			<field name="invoice_repartition_line_ids"
+				eval="[(5, 0, 0),
+            (0,0, {
+             'factor_percent': 100,
+                'repartition_type': 'base',
+                 'tag_ids':[ref('tax_tag_BS0m')]
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('l10n_me.account_account_template_sale'),
+                'tag_ids':[ref('tax_tag_s0m')]
+            }),
+        ]" />
+			<field name="refund_repartition_line_ids"
+				eval="[(5, 0, 0),
+            (0,0, {
+             'factor_percent': 100,
+                'repartition_type': 'base',
+                  'tag_ids':[ref('tax_tag_BS0')]
+            }),
+            (0,0, {
+            'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('l10n_me.account_account_template_sale'),
+                'tag_ids':[ref('tax_tag_10s')]
+                
+            }),
+        ]" />
+		</record>
+		
+		<record id="tax_pe" model="account.tax.template">
+		<field name="sequence">10</field>
+		<field name="description">Purchases Exempt</field>
+		<field name="name">Purchases Exempt</field>
+		<field name="price_include" eval="0" />
+		<field name="amount">0</field>
+		<field name="amount_type">percent</field>
+		<field name="type_tax_use">purchase</field>
+		<field name="active">False</field>
+		<field name="chart_template_id" ref="l10n_bh.l10nbh_chart_template" />
+		<field name="tax_group_id" ref="tax_group_pe" />
+		<field name="invoice_repartition_line_ids"
+			eval="[(5, 0, 0),
+           (0,0, {
+            'factor_percent': 100,
+               'repartition_type': 'base',
+                'tag_ids':[ref('tax_tag_35')]
+           }),
+           (0,0, {
+               'factor_percent': 100,
+               'repartition_type': 'tax',
+               'account_id': ref('l10n_me.account_account_template_purchase_dep'),
+               'tag_ids':[ref('tax_tag_09')]
+           }),
+       ]" />
+		<field name="refund_repartition_line_ids"
+			eval="[(5, 0, 0),
+           (0,0, {
+            'factor_percent': 100,
+               'repartition_type': 'base',
+                 'tag_ids':[ref('tax_tag_36')]
+           }),
+           (0,0, {
+           'factor_percent': 100,
+               'repartition_type': 'tax',
+               'account_id': ref('l10n_me.account_account_template_purchase_dep'),
+               'tag_ids':[ref('tax_tag_10')]
+               
+           }),
+       ]" />
+		</record>
+
+
+		<record id="tax_so_exempt" model="account.tax.template">
+			<field name="sequence">10</field>
+			<field name="description">Sales Exempt</field>
+			<field name="name">Sales Exempt</field>
+			<field name="price_include" eval="0" />
+			<field name="amount">0</field>
+			<field name="amount_type">percent</field>
+			<field name="type_tax_use">sale</field>
+			<field name="active">False</field>
+			<field name="chart_template_id" ref="l10n_bh.l10nbh_chart_template" />
+			<field name="tax_group_id" ref="tax_group_se" />
+			<field name="invoice_repartition_line_ids"
+				eval="[(5, 0, 0),
+            (0,0, {
+             'factor_percent': 100,
+                'repartition_type': 'base',
+                 'tag_ids':[ref('tax_tag_46')]
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('l10n_me.account_account_template_sale'),
+                'tag_ids':[ref('tax_tag_22')]
+            }),
+        ]" />
+			<field name="refund_repartition_line_ids"
+				eval="[(5, 0, 0),
+            (0,0, {
+             'factor_percent': 100,
+                'repartition_type': 'base',
+                  'tag_ids':[ref('tax_tag_45')]
+            }),
+            (0,0, {
+            'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('l10n_me.account_account_template_sale'),
+                'tag_ids':[ref('tax_tag_21')]
+                
+            }),
+        ]" />
+
+		</record>
+
+		<record id="tax_taco" model="account.tax.template">
+			<field name="description">VAT Adjustment - For Company</field>
+			<field name="name">VAT Adjustment - For Company</field>
+			<field name="price_include" eval="0" />
+			<field name="amount">00</field>
+			<field name="amount_type">percent</field>
+			<field name="type_tax_use">none</field>
+			<field name="active">False</field>
+			<field name="chart_template_id" ref="l10n_bh.l10nbh_chart_template" />
+			<field name="tax_group_id" ref="tax_group_vat_adjusment" />
+			<field name="invoice_repartition_line_ids"
+				eval="[(5, 0, 0),
+            (0,0, {
+             'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                 'tag_ids':[ref('tax_tag_23')],
+                 'account_id': ref('l10n_me.account_account_template_rounded_dep'),
+            }),
+        ]" />
+			<field name="refund_repartition_line_ids"
+				eval="[(5, 0, 0),
+            (0,0, {
+                 'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+            'factor_percent': 100,
+                'repartition_type': 'tax',
+                
+            }),
+        ]" />
+		</record>
+
+	</data>
+</odoo>
