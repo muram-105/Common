@@ -15,7 +15,7 @@ jobs:
 
       - name: Update Submodules
         run: |
-          git submodule foreach --recursive 'git fetch origin && git checkout origin/main && git pull'
+          git submodule foreach --recursive 'git fetch origin && git checkout origin/16.0 && git pull'
           git config user.name "muram-105"
           git config user.email "muram8700@gmail.com"
 
