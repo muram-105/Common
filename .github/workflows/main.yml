@@ -1,4 +1,4 @@
-name: Update Test Submodule
+name: Update Submodules
 
 on:
   push:
@@ -6,23 +6,35 @@ on:
       - '16.0'
 
 jobs:
-  update-test:
+  update-submodules:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Common repository
         uses: actions/checkout@v2
 
-      - name: Update Test submodule
+      - name: Update Submodules
         run: |
-          cd Test
-          git submodule update --remote common
+          # List of repositories and their respective submodules
+          repos:
+            - name: Test
+              path: Test
+              submodule: common
+            #- name: Other-repo
+            # path: Other
+            # submodule: subcommon
 
-      - name: Commit and push changes
-        run: |
-          cd Test
           git config user.name "muram-105"
-          git config user.email "muram8700@hotmail.com"
-          git add common
-          git commit -m "Update Common submodule"
-          git push
+          git config user.email "muram8700@gmail.com"
+          
+          # Loop through the repositories and update submodules
+          for repo in $repos; do
+            cd $repo[path]
+            git submodule update --remote $repo[submodule]
+            cd ..
+          done
+          
+          # Commit and push changes
+          git add .
+          git commit -m "Update submodules"
+          git push origin HEAD:${{ github.ref }}
