@@ -15,22 +15,22 @@ jobs:
 
       - name: Update Submodules
         run: |
-          # List of repositories and their respective submodules
+          # Define the list of repositories and their respective submodules
           repos:
             - name: Test
               path: Test
               submodule: common
             #- name: Other-repo
-            # path: Other
-            # submodule: subcommon
+            #  path: Other
+            #  submodule: subcommon
 
           git config user.name "muram-105"
           git config user.email "muram8700@gmail.com"
           
           # Loop through the repositories and update submodules
-          for repo in $repos; do
-            cd $repo[path]
-            git submodule update --remote $repo[submodule]
+          for repo in "${repos[@]}"; do
+            cd "${repo[path]}"
+            git submodule update --remote "${repo[submodule]}"
             cd ..
           done
           
