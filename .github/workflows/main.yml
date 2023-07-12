@@ -1,4 +1,4 @@
-name: Push to Test Submodule
+name: Update Test Repository
 
 on:
   push:
@@ -6,17 +6,17 @@ on:
       - '16.0'
 
 jobs:
-  push:
+  update-test:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Push changes to Test repository
+      - name: Update submodule
         run: |
-          git config --global user.name "muram-105"
-          git config --global user.email "muram8700@gmail.com"
-          cd path/to/common/submodule # Replace with the actual path to your common submodule
-          git remote set-url origin https://github.com/muram-105/Test.git # Replace with the URL of your test repository
-          git push origin HEAD:main
+          git submodule update --remote --merge
+          cd Test
+          git add .
+          git commit -m "Update submodule from common Muram"
+          git push origin main
