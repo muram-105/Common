@@ -16,19 +16,26 @@ jobs:
       - name: Update Submodules
         run: |
           # Define the list of repositories and their respective submodules
-          repos:
-            - name: Test
-              submodule: common
+          repos='[
+            {
+              "name": "Test",
+              "submodule": "common"
+            }
+          ]'
 
           git config user.name "muram-105"
           git config user.email "muram8700@gmail.com"
           
           # Get the path of the Test repository
-          test_repo_path=${{ github.workspace }}/Test
+          test_repo_path="${{ github.workspace }}/Test"
           
           # Loop through the repositories and update submodules
-          for repo in "${repos[@]}"; do
-            submodule="${repo[submodule]}"
+          for repo in $(echo "$repos" | jq -r '.[] | @base64'); do
+            _jq() {
+              echo ${repo} | base64 --decode | jq -r ${1}
+            }
+
+            submodule=$(_jq '.submodule')
             
             cd "$test_repo_path"
             git submodule update --remote "$submodule"
