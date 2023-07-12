@@ -18,19 +18,20 @@ jobs:
           # Define the list of repositories and their respective submodules
           repos:
             - name: Test
-              path: Test
               submodule: common
-            #- name: Other-repo
-            #  path: Other
-            #  submodule: subcommon
 
           git config user.name "muram-105"
           git config user.email "muram8700@gmail.com"
           
+          # Get the path of the Test repository
+          test_repo_path=${{ github.workspace }}/Test
+          
           # Loop through the repositories and update submodules
           for repo in "${repos[@]}"; do
-            cd "${repo[path]}"
-            git submodule update --remote "${repo[submodule]}"
+            submodule="${repo[submodule]}"
+            
+            cd "$test_repo_path"
+            git submodule update --remote "$submodule"
             cd ..
           done
           
