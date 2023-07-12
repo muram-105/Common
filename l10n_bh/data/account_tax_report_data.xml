@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="tax_report_vat" model="account.report">
+		<field name="name">Tax Form 1</field>
+		<field name="root_report_id" ref="account.generic_tax_report" />
+		<field name="country_id" ref="base.bh" />
+		<field name="filter_fiscal_position" eval="True" />
+		<field name="availability_condition">country</field>
+		<field name="column_ids">
+			<record id="tax_report_vat_balance" model="account.report.column">
+				<field name="name">Balance</field>
+				<field name="expression_label">balance</field>
+				<field name="blank_if_zero" eval="False"/>
+			</record>
+		</field>
+		<field name="line_ids">
+			<record id="tax_report_title_net" model="account.report.line">
+				<field name="name">Net (This report reflects the selected period only and doesn't include previous balances).</field>
+				<field name="code">NET</field>
+                <field name="expression_ids">
+                    <record id="tax_report_line_net_balance" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">aggregation</field>
+                        <field name="formula">STD.balance+PTD.balance+TACO.balance-TATD.balance</field>
+                    </record>
+                </field>
+			</record>
+			
+			<record id="tax_report_title_svd" model="account.report.line">
+				<field name="name">Sales Tax Deposits</field>
+				<field name="code">STD</field>
+				<field name="expression_ids">
+                    <record id="tax_report_line_std_tag" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">aggregation</field>
+                        <field name="formula">S10.balance+S0.balance+SE.balance</field>
+                    </record>
+                </field>
+				<field name="children_ids"> 
+					<record id="tax_report_line_s10" model="account.report.line">
+                         <field name="name">Sales 10%</field>
+                         <field name="code">S10</field>
+                         <field name="expression_ids">
+                             <record id="tax_report_line_s10_tag" model="account.report.expression">
+                                 <field name="label">balance</field>
+                                 <field name="engine">tax_tags</field>
+                                 <field name="formula">S10</field>
+                             </record>
+                         </field>
+                     </record>
+                     <record id="tax_report_line_ls0" model="account.report.line">
+                         <field name="name">Sales 0%</field>
+                         <field name="code">S0</field>
+                         <field name="expression_ids">
+                             <record id="tax_report_line_ls0_tag" model="account.report.expression">
+                                 <field name="label">balance</field>
+                                 <field name="engine">tax_tags</field>
+                                 <field name="formula">S0</field>
+                             </record>
+                         </field>
+                     </record>
+                     <record id="tax_report_line_se" model="account.report.line">
+                         <field name="name">Sales Exempt</field>
+                         <field name="code">SE</field>
+                         <field name="expression_ids">
+                             <record id="tax_report_line_se_tag" model="account.report.expression">
+                                 <field name="label">balance</field>
+                                 <field name="engine">tax_tags</field>
+                                 <field name="formula">SE</field>
+                             </record>
+                         </field>
+                     </record>
+				</field>
+			</record>
+			
+			<record id="tax_report_title_pvd" model="account.report.line">
+				<field name="name">Purchases Tax Deposits</field>
+				<field name="code">PTD</field>
+				<field name="expression_ids">
+                    <record id="tax_report_line_ptd_tag" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">aggregation</field>
+                        <field name="formula">P10.balance+P0.balance+PE.balance</field>
+                    </record>
+                </field>
+				<field name="children_ids"> 
+                     <record id="tax_report_line_p10" model="account.report.line">
+                         <field name="name">Purchase 10%</field>
+                         <field name="code">P10</field>
+                         <field name="expression_ids">
+                             <record id="tax_report_line_p10_tag" model="account.report.expression">
+                                 <field name="label">balance</field>
+                                 <field name="engine">tax_tags</field>
+                                 <field name="formula">P10</field>
+                             </record>
+                         </field>
+                     </record>
+                     <record id="tax_report_line_p0" model="account.report.line">
+                         <field name="name">Purchase 0%</field>
+                         <field name="code">P0</field>
+                         <field name="expression_ids">
+                             <record id="tax_report_line_p0_tag" model="account.report.expression">
+                                 <field name="label">balance</field>
+                                 <field name="engine">tax_tags</field>
+                                 <field name="formula">P0</field>
+                             </record>
+                         </field>
+                     </record>
+                     <record id="tax_report_line_pe" model="account.report.line">
+                         <field name="name">Purchases Exempt</field>
+                         <field name="code">PE</field>
+                         <field name="expression_ids">
+                             <record id="tax_report_line_pe_tag" model="account.report.expression">
+                                 <field name="label">balance</field>
+                                 <field name="engine">tax_tags</field>
+                                 <field name="formula">PE</field>
+                             </record>
+                         </field>
+                     </record>
+				</field>
+			</record>
+			
+			<record id="tax_report_title_bs" model="account.report.line">
+				<field name="name">Base Sales</field>
+				<field name="expression_ids">
+                    <record id="tax_report_line_bs_tag" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">aggregation</field>
+                        <field name="formula">BS10.balance+BS0.balance+BSE.balance</field>
+                    </record>
+                </field>
+                <field name="children_ids">
+                	<record id="tax_report_line_bs10" model="account.report.line">
+                         <field name="name">Base Sale 10%</field>
+                         <field name="code">BS10</field>
+                         <field name="expression_ids">
+                             <record id="tax_report_line_bs10_tag" model="account.report.expression">
+                                 <field name="label">balance</field>
+                                 <field name="engine">tax_tags</field>
+                                 <field name="formula">BS10</field>
+                             </record>
+                         </field>
+                     </record>
+                     <record id="tax_report_line_BS0" model="account.report.line">
+                         <field name="name">Base Sales 0%</field>
+                         <field name="code">BS0</field>
+                         <field name="expression_ids">
+                             <record id="tax_report_line_BS0_tag" model="account.report.expression">
+                                 <field name="label">balance</field>
+                                 <field name="engine">tax_tags</field>
+                                 <field name="formula">BS0</field>
+                             </record>
+                         </field>
+                     </record>
+                     <record id="tax_report_line_BSE" model="account.report.line">
+                         <field name="name">Base Sales Exempt</field>
+                         <field name="code">BSE</field>
+                         <field name="expression_ids">
+                             <record id="tax_report_line_BSE_tag" model="account.report.expression">
+                                 <field name="label">balance</field>
+                                 <field name="engine">tax_tags</field>
+                                 <field name="formula">BSE</field>
+                             </record>
+                         </field>
+                     </record>
+                </field>
+             </record>
+             
+             <record id="tax_report_title_bp" model="account.report.line">
+				<field name="name">Base Purchase</field>
+				<field name="code">BP</field>
+				<field name="expression_ids">
+                    <record id="tax_report_line_bp_tag" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">aggregation</field>
+                        <field name="formula">BP10.balance+BP0.balance+BPE.balance</field>
+                    </record>
+                </field>
+                <field name="children_ids">
+                	<record id="tax_report_line_bp10" model="account.report.line">
+                         <field name="name">Base Purchase 10%</field>
+                         <field name="code">BP10</field>
+                         <field name="expression_ids">
+                             <record id="tax_report_line_bp10_tag" model="account.report.expression">
+                                 <field name="label">balance</field>
+                                 <field name="engine">tax_tags</field>
+                                 <field name="formula">BP10</field>
+                             </record>
+                         </field>
+                     </record>
+                     <record id="tax_report_line_BP0" model="account.report.line">
+                         <field name="name">Base Purchase 0%</field>
+                         <field name="code">BP0</field>
+                         <field name="expression_ids">
+                             <record id="tax_report_line_BP0_tag" model="account.report.expression">
+                                 <field name="label">balance</field>
+                                 <field name="engine">tax_tags</field>
+                                 <field name="formula">BP0</field>
+                             </record>
+                         </field>
+                     </record>
+                     <record id="tax_report_line_BPE" model="account.report.line">
+                         <field name="name">Base Purchases Exempt</field>
+                         <field name="code">BPE</field>
+                         <field name="expression_ids">
+                             <record id="tax_report_line_BPE_tag" model="account.report.expression">
+                                 <field name="label">balance</field>
+                                 <field name="engine">tax_tags</field>
+                                 <field name="formula">BPE</field>
+                             </record>
+                         </field>
+                     </record>
+                </field>
+             </record>
+             
+             <record id="tax_report_title_adjustment_movements" model="account.report.line">
+				<field name="name">Adjustment Movements</field>
+				<field name="code">AM</field>
+				<field name="expression_ids">
+                    <record id="tax_report_line_am_tag" model="account.report.expression">
+                        <field name="label">balance</field>
+                        <field name="engine">aggregation</field>
+                        <field name="formula">TACO.balance+TATD.balance</field>
+                    </record>
+                </field>
+                <field name="children_ids">
+                	<record id="tax_report_line_VACO" model="account.report.line">
+                         <field name="name">Tax Adjustment - For Company</field>
+                         <field name="code">TACO</field>
+                         <field name="expression_ids">
+                             <record id="tax_report_line_VACO_tag" model="account.report.expression">
+                                 <field name="label">balance</field>
+                                 <field name="engine">tax_tags</field>
+                                 <field name="formula">TACO</field>
+                             </record>
+                         </field>
+                     </record>
+                     <record id="tax_report_line_TATD" model="account.report.line">
+                         <field name="name">Tax Adjustment - For Tax Department</field>
+                         <field name="code">TATD</field>
+                         <field name="expression_ids">
+                             <record id="tax_report_line_TATD_tag" model="account.report.expression">
+                                 <field name="label">balance</field>
+                                 <field name="engine">tax_tags</field>
+                                 <field name="formula">TATD</field>
+                             </record>
+                         </field>
+                     </record>
+             	</field>
+             </record>
+			
+		</field>
+	</record>
+
+
+</odoo>
