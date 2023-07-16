@@ -19,8 +19,11 @@ jobs:
           git config --global user.email "amuram8700@gmail.com"
           git submodule update --remote --recursive --remote
 
+          # Determine the path of the common submodule
+          COMMON_SUBMODULE_PATH=$(find . -type d -name "common" | head -n 1)
+
           # Update the submodule repository URL and branch
-          cd ~/Github/Test/Commo
+          cd $COMMON_SUBMODULE_PATH
           git remote set-url origin https://github.com/muram-105/Test.git
           git checkout main
 
