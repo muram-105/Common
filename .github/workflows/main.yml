@@ -20,7 +20,7 @@ jobs:
           git submodule update --remote --recursive --remote
 
           # Update the submodule repository URL and branch
-          cd path/to/common
+          cd common
           git remote set-url origin https://github.com/muram-105/Test.git
           git checkout main
 
