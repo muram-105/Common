@@ -24,7 +24,7 @@ jobs:
           # Update the submodule repository URL and branch
           cd $GITHUB_WORKSPACE/$COMMON_SUBMODULE_PATH
           git remote set-url origin https://github.com/muram-105/Test.git
-          git checkout main
+          git checkout '16.0'
 
           # Commit and push the updated submodule
           git add .
