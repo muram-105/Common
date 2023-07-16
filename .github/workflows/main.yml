@@ -16,7 +16,15 @@ jobs:
       - name: Update Submodule
         run: |
           git config --global user.name "muram-105"
-          git config --global user.email "muram8700@gmail.com"
-          git submodule update --remote --recursive --remote common
+          git config --global user.email "amuram8700@gmail.com"
+          git submodule update --remote --recursive --remote
+
+          # Update the submodule repository URL and branch
+          cd path/to/common
+          git remote set-url origin https://github.com/muram-105/Test.git
+          git checkout main
+
+          # Commit and push the updated submodule
+          git add .
           git commit -m "Update common submodule" --no-verify
           git push
