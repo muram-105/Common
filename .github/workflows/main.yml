@@ -3,7 +3,7 @@ name: Update Submodule
 on:
   push:
     branches:
-      - 'main'
+      - '16.0'
 
 jobs:
   update:
@@ -17,21 +17,16 @@ jobs:
         run: |
           git config --global user.name "muram-105"
           git config --global user.email "muram8700@gmail.com"
-          
+
           # Determine the path of the Common submodule
           COMMON_SUBMODULE_PATH=$(find . -type d -name "Common" | head -n 1)
 
           # Update the submodule repository URL and branch
           cd $GITHUB_WORKSPACE/$COMMON_SUBMODULE_PATH
           git remote set-url origin https://github.com/muram-105/Test.git
-          git checkout '16.0'
+          git checkout main
 
           # Commit and push the updated submodule
           git add .
           git commit -m "Update Common submodule" --no-verify
           git push
-
-      - name: Checkout main branch
-        run: |
-          cd $GITHUB_WORKSPACE
-          git checkout main
