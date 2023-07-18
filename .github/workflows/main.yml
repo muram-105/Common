@@ -1,4 +1,4 @@
-name: Sync Submodule common in test
+name: Update Test Submodule
 
 on:
   push:
@@ -6,29 +6,13 @@ on:
       - '16.0'
 
 jobs:
-  sync:
+  update_test_submodule:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Update Submodule
-        env:
-          COMMON_ACCESS_TOKEN: ${{ secrets.TEST_REPO_TOKEN }}
-        run: |
-          git config --global user.name "muram-105"
-          git config --global user.email "muram8700@gmail.com"
-          git submodule sync
-          git submodule update --remote --merge --init --recursive
-          cd common
-          git config credential.helper "store --file=.git/credentials"  # Store credentials temporarily
-          git config user.name "muram-105"
-          git config user.email "muram8700@gmail.com"
-          git fetch --all
-          git checkout 16.0
-          git pull origin 16.0 --rebase
-          cd ..
-          git add common
-          git commit -m "Sync Submodule" || echo "No changes to submodule"
-          git push --set-upstream origin 16.0
+      - name: Dispatch repository event
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.TEST_REPO_TOKEN }}
+          repository: muram-105/Test
+          event-type: update-test-submodule
