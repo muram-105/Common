@@ -1,4 +1,4 @@
-name: Update Test Submodule
+name: Sync Submodule
 
 on:
   push:
@@ -6,13 +6,18 @@ on:
       - '16.0'
 
 jobs:
-  update_test_submodule:
+  sync:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Dispatch repository event
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          token: ${{ secrets.TEST_REPO_TOKEN }}
-          repository: muram-105/Common
-          event-type: update-test-submodule
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Update Submodule
+        run: |
+          git config --global user.name "muram-105"
+          git config --global user.email "muram8700@gmail.com"
+          git submodule sync
+          git submodule update --remote --merge
+          git commit -am "Sync Submodule" || echo "No changes to submodule"
+          git push
