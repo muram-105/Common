@@ -13,6 +13,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Set up Git
+        run: |
+          git config --global user.name "muram-105"
+          git config --global user.email "your.email@example.com"
+
       - name: Update submodule
         run: |
           git submodule sync
@@ -20,7 +25,6 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config user.name "muram-105"
-          git config user.email "muram8700@gmail.com"
           git commit -am "Sync submodule"
+          git remote set-url origin https://$TEST_REPO_TOKEN@github.com/muram-105/Common.git
           git push
