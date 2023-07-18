@@ -26,6 +26,9 @@ jobs:
           git pull
 
           # Commit and push the submodule update
+          git config --global user.email "muram8700@gmail.com"
+          git config --global user.name "muram-105"
+
           git add .
           git commit -m "Update Test submodule" --no-verify
           git push origin '16.0'
