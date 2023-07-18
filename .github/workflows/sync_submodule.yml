@@ -14,5 +14,5 @@ jobs:
         uses: peter-evans/repository-dispatch@v1
         with:
           token: ${{ secrets.COMMON_REPO_TOKEN }}
-          repository: muram-105/Test
-          event-type: update-test-submodule
+#           repository: muram-105/Test
+#           event-type: update-test-submodule
