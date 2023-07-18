@@ -1,0 +1,34 @@
+id,chart_template_id/id,name,code_prefix_start,code_prefix_end
+account_group_1,l10nme_chart_template,Assets,1,1
+account_group_2,l10nme_chart_template,Current Assets,11,11
+account_group_3,l10nme_chart_template,Bank & Cash,1101,1101
+account_group_6,l10nme_chart_template,Account Receivable,1102,1102
+account_group_7,l10nme_chart_template,Prepayments,1103,1103
+account_group_8,l10nme_chart_template,Inventory,1104,1104
+account_group_9,l10nme_chart_template,Intermediary Accounts,1199,1199
+account_group_10,l10nme_chart_template,Fixed Assets,12,12
+account_group_11,l10nme_chart_template,Net Tools and Equipments,1201,1201
+account_group_12,l10nme_chart_template,Net Electricity Devices,1202,1202
+account_group_13,l10nme_chart_template,Net Furniture,1203,1203
+account_group_14,l10nme_chart_template,Net Decorations,1204,1204
+account_group_15,l10nme_chart_template,Net Computers,1205,1205
+account_group_16,l10nme_chart_template,Net Cars,1206,1206
+account_group_17,l10nme_chart_template,Net Air Conditions,1207,1207
+account_group_18,l10nme_chart_template,Net Accounting Systems,1208,1208
+account_group_19,l10nme_chart_template,Liabilities ,2,2
+account_group_20,l10nme_chart_template,Current Liabilities ,21,21
+account_group_21,l10nme_chart_template,Account Payable,211,211
+account_group_22,l10nme_chart_template,Other Credit Balances,212,212
+account_group_23,l10nme_chart_template,Partners,213,213
+account_group_24,l10nme_chart_template,Non-Current Liabilities,22,22
+account_group_25,l10nme_chart_template,Capital & Owners Equity,3,3
+account_group_26,l10nme_chart_template,Owners Equity,31,31
+account_group_27,l10nme_chart_template,Gross Profit,4,4
+account_group_28,l10nme_chart_template,Revenues,41,41
+account_group_29,l10nme_chart_template,Other Gain or Income,42,42
+account_group_30,l10nme_chart_template,Operational Expenses,43,43
+account_group_31,l10nme_chart_template,Others,44,44
+account_group_32,l10nme_chart_template,Expenses,5,5
+account_group_33,l10nme_chart_template,General & Administrative Expenses,51,51
+account_group_34,l10nme_chart_template,Depreciation expenses.,52,52
+account_group_35,l10nme_chart_template,Other Debit Balances,1105,1105

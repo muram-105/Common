@@ -1,0 +1,1063 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_me
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-28 10:37+0000\n"
+"PO-Revision-Date: 2021-12-28 10:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_me
+#: model:ir.model,name:l10n_me.model_account_chart_template
+msgid "Account Chart Template"
+msgstr "قالب مخطط الحساب"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_30
+#: model:account.account.template,name:l10n_me.account_account_template_30
+#: model:account.group,name:l10n_me.1_account_group_21
+#: model:account.group.template,name:l10n_me.account_group_21
+msgid "Account Payable"
+msgstr "الذمم الدائنة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_6
+#: model:account.account.template,name:l10n_me.account_account_template_6
+#: model:account.group,name:l10n_me.1_account_group_6
+#: model:account.group.template,name:l10n_me.account_group_6
+msgid "Account Receivable"
+msgstr "الذمم المدينة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_101
+#: model:account.account.template,name:l10n_me.account_account_template_101
+msgid "Account Receivable (POS)"
+msgstr "الذمم الدائنة - نقاط البيع"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_74
+#: model:account.account.template,name:l10n_me.account_account_template_74
+msgid "Accounting Fees"
+msgstr "اتعاب محاسبة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_27
+#: model:account.account.template,name:l10n_me.account_account_template_27
+msgid "Accounting Systems"
+msgstr "نظام المحاسبة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_83
+#: model:account.account.template,name:l10n_me.account_account_template_83
+msgid "Accounting Systems Amortization Expense"
+msgstr "مصروف اطفاء برنامج المحاسبة "
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_33
+#: model:account.account.template,name:l10n_me.account_account_template_33
+msgid "Accrued Expenses - Salary"
+msgstr "مصاريف مستحقة - رواتب"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_35
+#: model:account.account.template,name:l10n_me.account_account_template_35
+msgid "Accrued Expenses – Internet"
+msgstr "مصاريف مستحقة - انترنت"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_34
+#: model:account.account.template,name:l10n_me.account_account_template_34
+msgid "Accrued Expenses – Rent"
+msgstr "مصاريف مستحقة - ايجارات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_28
+#: model:account.account.template,name:l10n_me.account_account_template_28
+msgid "Accumulated Amortization Accounting Systems"
+msgstr "مجمع اطفاء برنامج المحاسبة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_76
+#: model:account.account.template,name:l10n_me.account_account_template_76
+msgid "Advertising Expense"
+msgstr "مصروف الدعاية "
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_19
+#: model:account.account.template,name:l10n_me.account_account_template_19
+msgid "Air Conditions"
+msgstr "مكيفات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_20
+#: model:account.account.template,name:l10n_me.account_account_template_20
+msgid "Air Conditions Accumulated Depreciation"
+msgstr "مجمع اهتلاك مكيفات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_80
+#: model:account.account.template,name:l10n_me.account_account_template_80
+msgid "Air Conditions Depreciations Expense"
+msgstr "مصروف اهتلاك مكيفات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_75
+#: model:account.account.template,name:l10n_me.account_account_template_75
+#: model:account.reconcile.model,name:l10n_me.1_allowed_discount_template
+#: model:account.reconcile.model.template,name:l10n_me.allowed_discount_template
+msgid "Allowed Discount"
+msgstr "خصم مسموح به"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_1
+#: model:account.group.template,name:l10n_me.account_group_1
+msgid "Assets"
+msgstr "الاصول"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_69
+#: model:account.account.template,name:l10n_me.account_account_template_69
+msgid "Audit Fees"
+msgstr "مصاريف تدقيق"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_bank_1
+#: model:account.account.template,name:l10n_me.account_account_template_bank_1
+msgid "Bank"
+msgstr "البنك"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_3
+#: model:account.group.template,name:l10n_me.account_group_3
+msgid "Bank & Cash"
+msgstr "صناديق و بنوك"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_61
+#: model:account.account.template,name:l10n_me.account_account_template_61
+msgid "Bank Charges and Commissions"
+msgstr "فوائد و عمولات بنكية"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_95
+#: model:account.account.template,name:l10n_me.account_account_template_95
+msgid "Bank Suspense Account"
+msgstr "حركات بنكية معلقة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_95
+#: model:account.account.template,name:l10n_me.account_account_template_95
+msgid "Cash Discount Loss"
+msgstr "خسارة الخصم النقدي"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_95
+#: model:account.account.template,name:l10n_me.account_account_template_95
+msgid "Cash Discount Gain"
+msgstr "كسب الخصم النقدي"
+
+#. module: l10n_me
+#: model:ir.model.fields.selection,name:l10n_me.selection__account_journal__invoice_reference_type__sale
+msgid "Based on Sale Order #."
+msgstr "بناءً على امر بيع رقم"
+
+#. module: l10n_me
+#: model:ir.model.fields.selection,name:l10n_me.selection__account_journal__invoice_reference_type__origin
+msgid "Based on Source Document"
+msgstr "بناءً على مستند المصدر"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_72
+#: model:account.account.template,name:l10n_me.account_account_template_72
+msgid "Building Services Expense"
+msgstr "مصاريف خدمات المجمع"
+
+#. module: l10n_me
+#: model:ir.model.fields,field_description:l10n_me.field_account_reconcile_model_template__name
+msgid "Button Label"
+msgstr "تسمية الزر"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_43
+#: model:account.account.template,name:l10n_me.account_account_template_43
+msgid "Capital"
+msgstr "رأس المال"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_25
+#: model:account.group.template,name:l10n_me.account_group_25
+msgid "Capital & Owners Equity"
+msgstr "رأس المال و حقوق الملكية"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_23
+#: model:account.account.template,name:l10n_me.account_account_template_23
+msgid "Cars"
+msgstr "السيارات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_24
+#: model:account.account.template,name:l10n_me.account_account_template_24
+msgid "Cars Accumulated Depreciation"
+msgstr "مجمع اهتلاك السيارات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_77
+#: model:account.account.template,name:l10n_me.account_account_template_77
+msgid "Cars Depreciations Expense"
+msgstr "مصروف اهتلاك السيارات "
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_cash
+#: model:account.account.template,name:l10n_me.account_account_cash
+msgid "Cash"
+msgstr "الصندوق"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_94
+#: model:account.account.template,name:l10n_me.account_account_template_94
+msgid "Cash Difference Gain"
+msgstr "ارباح فروقات الصندوق"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_93
+#: model:account.account.template,name:l10n_me.account_account_template_93
+msgid "Cash Difference Loss"
+msgstr "خسائر فروقات الصندوق"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_105
+#: model:account.account.template,name:l10n_me.account_account_template_105
+msgid "Cash Suspense Account"
+msgstr "حركات نقدية معلقة "
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_3
+#: model:account.account.template,name:l10n_me.account_account_template_3
+msgid "Checks Box"
+msgstr "صندوق الشيكات"
+
+#. module: l10n_me
+#: model:account.reconcile.model,name:l10n_me.1_cheques_book_template
+#: model:account.reconcile.model.template,name:l10n_me.cheques_book_template
+msgid "Cheques Book & Others"
+msgstr "عمولة اصدار دفتر شيكات / شهادات / تصديق "
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_66
+#: model:account.account.template,name:l10n_me.account_account_template_66
+msgid "Cleaning Expenses"
+msgstr "مصروف النظافة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_42
+#: model:account.account.template,name:l10n_me.account_account_template_42
+msgid "Commercial Loan"
+msgstr "قرض تجاري"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_102
+#: model:account.account.template,name:l10n_me.account_account_template_102
+msgid "Communication Allowance Expense"
+msgstr "مصروف بدل اتصالات"
+
+#. module: l10n_me
+#: model:ir.model.fields,field_description:l10n_me.field_account_bank_statement_import_journal_creation__invoice_reference_type
+#: model:ir.model.fields,field_description:l10n_me.field_account_journal__invoice_reference_type
+msgid "Communication Type"
+msgstr "نوع التواصل"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_17
+#: model:account.account.template,name:l10n_me.account_account_template_17
+msgid "Computers"
+msgstr "الحاسبات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_18
+#: model:account.account.template,name:l10n_me.account_account_template_18
+msgid "Computers Accumulated Depreciation"
+msgstr "مجمع اهتلاك الحاسبات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_79
+#: model:account.account.template,name:l10n_me.account_account_template_79
+msgid "Computers Depreciation Expense"
+msgstr "مصروف اهتلاك الحاسبات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_53
+#: model:account.account.template,name:l10n_me.account_account_template_53
+msgid "Cost of Goods Sold"
+msgstr "كلفة البضاعة المباعة"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_2
+#: model:account.group.template,name:l10n_me.account_group_2
+msgid "Current Assets"
+msgstr "الاصول المتداولة"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_20
+#: model:account.group.template,name:l10n_me.account_group_20
+msgid "Current Liabilities "
+msgstr "الالتزامات المتداولة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_21
+#: model:account.account.template,name:l10n_me.account_account_template_21
+msgid "Decorations"
+msgstr "الديكورات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_22
+#: model:account.account.template,name:l10n_me.account_account_template_22
+msgid "Decorations Accumulated Depreciation"
+msgstr "مجمع اهتلاك الديكورات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_81
+#: model:account.account.template,name:l10n_me.account_account_template_81
+msgid "Decorations Depreciations Expense"
+msgstr "مصروف اهتلاك الديكورات "
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_34
+#: model:account.group.template,name:l10n_me.account_group_34
+msgid "Depreciation expenses."
+msgstr "مصاريف اهتلاك"
+
+#. module: l10n_me
+#: code:addons/l10n_me/models/account.py:0
+#, python-format
+msgid "ER"
+msgstr ""
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_67
+#: model:account.account.template,name:l10n_me.account_account_template_67
+#: model:account.reconcile.model,name:l10n_me.1_earned_discount_template
+#: model:account.reconcile.model.template,name:l10n_me.earned_discount_template
+msgid "Earned Discount"
+msgstr "خصم مكتسب"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_98
+#: model:account.account.template,name:l10n_me.account_account_template_98
+msgid "Electricial Devices"
+msgstr "الاجهزة الالكترونية"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_97
+#: model:account.account.template,name:l10n_me.account_account_template_97
+msgid "Electricial Devices Accumulated Depreciation"
+msgstr "مجمع اهتلاك الاجهزة الالكترونية"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_99
+#: model:account.account.template,name:l10n_me.account_account_template_99
+msgid "Electricial Devices Expense Depreciation"
+msgstr "مصروف اهتلاك الاجهزة الالكترونية"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_60
+#: model:account.account.template,name:l10n_me.account_account_template_60
+msgid "Electricial Expenses"
+msgstr "مصروف الكهرباء"
+
+#. module: l10n_me
+#: code:addons/l10n_me/models/account.py:0
+#, python-format
+msgid "Expense Recognition"
+msgstr "الاعتراف بالمصاريف"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_32
+#: model:account.group.template,name:l10n_me.account_group_32
+msgid "Expenses"
+msgstr "المصاريف"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_63
+#: model:account.account.template,name:l10n_me.account_account_template_63
+msgid "Financial Rewards Expense"
+msgstr "مصاريف مكافات مالية"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_10
+#: model:account.group.template,name:l10n_me.account_group_10
+msgid "Fixed Assets"
+msgstr "الاصول الثابتة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_64
+#: model:account.account.template,name:l10n_me.account_account_template_64
+msgid "Fuel Expense"
+msgstr "مصروف المحروقات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_15
+#: model:account.account.template,name:l10n_me.account_account_template_15
+msgid "Furniture"
+msgstr "الاثاث"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_16
+#: model:account.account.template,name:l10n_me.account_account_template_16
+msgid "Furniture Accumulated Depreciation"
+msgstr "مجمع اهتلاك الاثاث"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_78
+#: model:account.account.template,name:l10n_me.account_account_template_78
+msgid "Furniture Expense Depreciation"
+msgstr "مصروف اهتلاك الاثاث"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_gl_x_exh
+#: model:account.account.template,name:l10n_me.account_account_template_gl_x_exh
+msgid "Gain Currency Exchange"
+msgstr "ارباح فروقات عملة"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_33
+#: model:account.group.template,name:l10n_me.account_group_33
+msgid "General & Administrative Expenses"
+msgstr "المصاريف الإدارية و العمومية "
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_58
+#: model:account.account.template,name:l10n_me.account_account_template_58
+msgid "Government Fees"
+msgstr "رسوم حكومية"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_27
+#: model:account.group.template,name:l10n_me.account_group_27
+msgid "Gross Profit"
+msgstr "مجمل الدخل"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_65
+#: model:account.account.template,name:l10n_me.account_account_template_65
+msgid "Hospitality Expense"
+msgstr "مصروف الضيافة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_104
+#: model:account.account.template,name:l10n_me.account_account_template_104
+msgid "Housing Allowance Expense"
+msgstr "مصروف بدل سكن"
+
+#. module: l10n_me
+#: model:account.reconcile.model,name:l10n_me.1_in_transfer_fees_template
+#: model:account.reconcile.model.template,name:l10n_me.in_transfer_fees_template
+msgid "In Transfer Fees"
+msgstr "عمولة حوالات واردة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_38
+#: model:account.account.template,name:l10n_me.account_account_template_38
+msgid "Income Tax Deposit 2%"
+msgstr "امانات ضريبة الدخل %2"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_39
+#: model:account.account.template,name:l10n_me.account_account_template_39
+msgid "Income Tax Deposit 5% Consultations Contracts"
+msgstr "وديعة ضريبة الدخل 5٪ عقود الاستشارات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_inc
+#: model:account.account.template,name:l10n_me.account_account_template_inc
+msgid "Income and Sales Tax Department"
+msgstr "دائرة ضريبة الدخل و المبيعات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_70
+#: model:account.account.template,name:l10n_me.account_account_template_70
+msgid "Insurance Expense"
+msgstr "مصروف التأمين"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_14
+#: model:account.account.template,name:l10n_me.account_account_template_14
+msgid "Insurance Recoveries"
+msgstr "تأمينات مستردة"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_9
+#: model:account.group.template,name:l10n_me.account_group_9
+msgid "Intermediary Accounts"
+msgstr "حسابات وسيطة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_71
+#: model:account.account.template,name:l10n_me.account_account_template_71
+msgid "Internet Expense"
+msgstr "مصروف الانترنت"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_8
+#: model:account.account.template,name:l10n_me.account_account_template_8
+#: model:account.group,name:l10n_me.1_account_group_8
+#: model:account.group.template,name:l10n_me.account_group_8
+msgid "Inventory"
+msgstr "المخزون"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_85
+#: model:account.account.template,name:l10n_me.account_account_template_85
+msgid "Inventory Adjustment"
+msgstr "تعديل المخزون"
+
+#. module: l10n_me
+#: model:ir.model,name:l10n_me.model_account_journal
+msgid "Journal"
+msgstr "دفتر اليومية"
+
+#. module: l10n_me
+#: model:ir.model,name:l10n_me.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_107
+#: model:account.account.template,name:l10n_me.account_account_template_107
+msgid "Legal Expense"
+msgstr ""
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_19
+#: model:account.group.template,name:l10n_me.account_group_19
+msgid "Liabilities "
+msgstr "الالتزامات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_l10nme_chart_template_liquidity_transfer
+#: model:account.account.template,name:l10n_me.l10nme_chart_template_liquidity_transfer
+msgid "Liquidity Transfer"
+msgstr "حوالات السيولة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_88
+#: model:account.account.template,name:l10n_me.account_account_template_88
+msgid "Loss Currency Exchange"
+msgstr "خسائر فروقات عملة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_59
+#: model:account.account.template,name:l10n_me.account_account_template_59
+msgid "Maintenance Expense"
+msgstr "مصروف الصيانة"
+
+#. module: l10n_me
+#: model:account.chart.template,name:l10n_me.l10nme_chart_template
+msgid "Middle East COA"
+msgstr "الدليل المحاسبي للشرق الأوسط"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_68
+#: model:account.account.template,name:l10n_me.account_account_template_68
+msgid "Miscellaneous Expense"
+msgstr "مصاريف متفرقة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_41
+#: model:account.account.template,name:l10n_me.account_account_template_41
+msgid "Money Loan"
+msgstr "قرض مالي"
+
+#. module: l10n_me
+#: model:ir.model.fields,field_description:l10n_me.field_account_reconcile_model__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: l10n_me
+#: code:addons/l10n_me/models/account.py:0
+#, python-format
+msgid "Name should be unique per company."
+msgstr "يجب أن يكون الاسم فريدًا لكل شركة"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_18
+#: model:account.group.template,name:l10n_me.account_group_18
+msgid "Net Accounting Systems"
+msgstr "صافي البرامج المحاسبية"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_17
+#: model:account.group.template,name:l10n_me.account_group_17
+msgid "Net Air Conditions"
+msgstr "صافي المكيفات"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_16
+#: model:account.group.template,name:l10n_me.account_group_16
+msgid "Net Cars"
+msgstr "صافي السيارات "
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_15
+#: model:account.group.template,name:l10n_me.account_group_15
+msgid "Net Computers"
+msgstr "صافي الحاسبات"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_14
+#: model:account.group.template,name:l10n_me.account_group_14
+msgid "Net Decorations"
+msgstr "صافي الديكورات"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_12
+#: model:account.group.template,name:l10n_me.account_group_12
+msgid "Net Electricity Devices"
+msgstr "صافي الاجهزة الالكترونية"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_13
+#: model:account.group.template,name:l10n_me.account_group_13
+msgid "Net Furniture"
+msgstr "صافي الاثاث"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_11
+#: model:account.group.template,name:l10n_me.account_group_11
+msgid "Net Tools and Equipments"
+msgstr "صافي العدد و المعدات"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_24
+#: model:account.group.template,name:l10n_me.account_group_24
+msgid "Non-Current Liabilities"
+msgstr "التزامات غير متداولة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_73
+#: model:account.account.template,name:l10n_me.account_account_template_73
+msgid "Non-deductible Tax Expense"
+msgstr "مصاريف ضريبية غير قابلة للخصم"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_30
+#: model:account.group.template,name:l10n_me.account_group_30
+msgid "Operational Expenses"
+msgstr "مصاريف تشغيلية"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_9
+#: model:account.account.template,name:l10n_me.account_account_template_9
+msgid "Operational Materials"
+msgstr "مواد اولية"
+
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.account_account_template_130
+#: model:account.account.template,name:l10n_me.account_account_template_130
+msgid "Work In Process"
+msgstr "مواد تحت التصنيع"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_103
+#: model:account.account.template,name:l10n_me.account_account_template_103
+msgid "Other Allowance Expense"
+msgstr "مصروف بدلات اخرى"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_22
+#: model:account.group.template,name:l10n_me.account_group_22
+msgid "Other Credit Balances"
+msgstr "ارصدة دائنة اخرى"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_35
+#: model:account.group.template,name:l10n_me.account_group_35
+msgid "Other Debit Balances"
+msgstr "ارصدة مدينة اخرى"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_7
+#: model:account.group.template,name:l10n_me.account_group_7
+msgid "Prepayments"
+msgstr "مدفوعات مقدما"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_29
+#: model:account.group.template,name:l10n_me.account_group_29
+msgid "Other Gain or Income"
+msgstr "ايرادات و مصاريف اخرى"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_31
+#: model:account.group.template,name:l10n_me.account_group_31
+msgid "Others"
+msgstr "اخرى"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_92
+#: model:account.account.template,name:l10n_me.account_account_template_92
+msgid "Outstanding Payments Bank"
+msgstr "مدفوعات بنكية معلقة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_90
+#: model:account.account.template,name:l10n_me.account_account_template_90
+msgid "Outstanding Receipts Bank"
+msgstr "مقبوضات بنكية معلقة"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_26
+#: model:account.group.template,name:l10n_me.account_group_26
+msgid "Owners Equity"
+msgstr "حقوق الملكية"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_29
+#: model:account.account.template,name:l10n_me.account_account_template_29
+msgid "PDC's Issued"
+msgstr "شيكات مؤجلة صادرة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_2
+#: model:account.account.template,name:l10n_me.account_account_template_2
+msgid "PDC's Received"
+msgstr "شيكات مؤجلة مقبوضة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_31
+#: model:account.account.template,name:l10n_me.account_account_template_31
+msgid "Partner 1"
+msgstr "الشريك 1"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_32
+#: model:account.account.template,name:l10n_me.account_account_template_32
+msgid "Partner 2"
+msgstr "الشريك 2"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_23
+#: model:account.group.template,name:l10n_me.account_group_23
+msgid "Partners"
+msgstr "الشركاء"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_57
+#: model:account.account.template,name:l10n_me.account_account_template_57
+msgid "Postage and Telephone Expense"
+msgstr "مصاريف البريد و الهاتف"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_13
+#: model:account.account.template,name:l10n_me.account_account_template_13
+msgid "Prepaid Expenses - Health Insurance"
+msgstr "مصاريف مدفوعة مقدما - تأمين طبي"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_11
+#: model:account.account.template,name:l10n_me.account_account_template_11
+msgid "Prepaid Expenses - Internet"
+msgstr "مصاريف مدفوعة مقدما - انترنت"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_10
+#: model:account.account.template,name:l10n_me.account_account_template_10
+msgid "Prepaid Expenses - Maintenance"
+msgstr "مصاريف مدفوعة مقدما - صيانة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_12
+#: model:account.account.template,name:l10n_me.account_account_template_12
+msgid "Prepaid Expenses - Rent"
+msgstr "مصاريف مدفوعة مقدما - ايجارات"
+
+#. module: l10n_me
+#: model:ir.model,name:l10n_me.model_account_reconcile_model
+msgid ""
+"Preset to create journal entries during a invoices and payments matching"
+msgstr "الإعداد المسبق لإنشاء قيود يومية خلال مطابقة الفواتير والدفعات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_54
+#: model:account.account.template,name:l10n_me.account_account_template_54
+msgid "Profit & Loss Assets Sales"
+msgstr "ارباح و خسائر بيع الاصول"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_purchase_dep
+#: model:account.account.template,name:l10n_me.account_account_template_purchase_dep
+msgid "Purchase Tax Deposit"
+msgstr "امانات ضريبة المشتريات"
+
+#. module: l10n_me
+#: code:addons/l10n_me/models/account.py:0
+#, python-format
+msgid "RECE"
+msgstr ""
+
+#. module: l10n_me
+#: code:addons/l10n_me/models/account.py:0
+#, python-format
+msgid "RR"
+msgstr ""
+
+#. module: l10n_me
+#: model:ir.model,name:l10n_me.model_account_reconcile_model_template
+msgid "Reconcile Model Template"
+msgstr "قالب نموذج تسوية"
+
+#. module: l10n_me
+#: code:addons/l10n_me/models/account.py:0
+#, python-format
+msgid "Reconciliation Entries"
+msgstr "قيود التسوية"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_56
+#: model:account.account.template,name:l10n_me.account_account_template_56
+msgid "Rent Expense"
+msgstr "مصروف الايجار"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_49
+#: model:account.account.template,name:l10n_me.account_account_template_49
+msgid "Retained Earnings"
+msgstr "الارباح المحتجزة"
+
+#. module: l10n_me
+#: code:addons/l10n_me/models/account.py:0
+#, python-format
+msgid "Revenue Recognition"
+msgstr "الاعتراف بالايردات"
+
+#. module: l10n_me
+#: model:account.group,name:l10n_me.1_account_group_28
+#: model:account.group.template,name:l10n_me.account_group_28
+msgid "Revenues"
+msgstr "الايرادات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_rounded_dep
+#: model:account.account.template,name:l10n_me.account_account_template_rounded_dep
+msgid "Rounded Tax Deposits"
+msgstr "امانات ضريبية مدورة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_55
+#: model:account.account.template,name:l10n_me.account_account_template_55
+msgid "Salaries Expense"
+msgstr "مصروف الرواتب"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_50
+#: model:account.account.template,name:l10n_me.account_account_template_50
+msgid "Sales"
+msgstr "المبيعات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_sale
+#: model:account.account.template,name:l10n_me.account_account_template_sale
+msgid "Sales Tax Deposits"
+msgstr "امانات ضريبة المبيعات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_86
+#: model:account.account.template,name:l10n_me.account_account_template_86
+msgid "Scrapped Products"
+msgstr "منتجات تالفة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_stock
+#: model:account.account.template,name:l10n_me.account_account_template_stock
+msgid "Shareholder"
+msgstr "الأسهم و السندات "
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_37
+#: model:account.account.template,name:l10n_me.account_account_template_37
+msgid "Social Security Deposits"
+msgstr "امانات الضمان الاجتماعي"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_108
+#: model:account.account.template,name:l10n_me.account_account_template_108
+msgid "Social Security expense"
+msgstr ""
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_44
+#: model:account.account.template,name:l10n_me.account_account_template_44
+msgid "Statutories Reserve"
+msgstr "الاحتياطي الاجباري"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_51
+#: model:account.account.template,name:l10n_me.account_account_template_51
+msgid "Stocks In Transit"
+msgstr "بضاعة بالطريق "
+
+#. module: l10n_me
+#: code:addons/l10n_me/models/account.py:0
+#: code:addons/l10n_me/models/account.py:0
+#, python-format
+msgid "Tax"
+msgstr "ضريبة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_25
+#: model:account.account.template,name:l10n_me.account_account_template_25
+msgid "Tools and Equipments"
+msgstr "عدد و معدات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_26
+#: model:account.account.template,name:l10n_me.account_account_template_26
+msgid "Tools and Equipments Accumulated Depreciation"
+msgstr "مجمع اهتلاك العدد و المعدات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_82
+#: model:account.account.template,name:l10n_me.account_account_template_82
+msgid "Tools and Equipments Depreciation Expense"
+msgstr "مصروف اهتلاك العدد و المعدات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_100
+#: model:account.account.template,name:l10n_me.account_account_template_100
+msgid "Transportation Allowance Expense"
+msgstr "مصروف بدل مواصلات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_96
+#: model:account.account.template,name:l10n_me.account_account_template_96
+msgid "Undistributed Profits/Losses"
+msgstr "ارباح و خسائر غير موزعة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_36
+#: model:account.account.template,name:l10n_me.account_account_template_36
+msgid "Unearned Revenues 12M"
+msgstr "الإيرادات غير المكتسبة 12 شهر"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_111
+#: model:account.account.template,name:l10n_me.account_account_template_111
+msgid "Unearned Revenues 6M"
+msgstr "الإيرادات غير المكتسبة 6 شهر"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_112
+#: model:account.account.template,name:l10n_me.account_account_template_112
+msgid "Unearned Revenues 3M"
+msgstr "الإيرادات غير المكتسبة 3 شهر"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_113
+#: model:account.account.template,name:l10n_me.account_account_template_113
+msgid "Unearned Revenues 2M"
+msgstr "الإيرادات غير المكتسبة 2 شهر"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_114
+#: model:account.account.template,name:l10n_me.account_account_template_114
+msgid "Unearned Revenues 1M"
+msgstr "الإيرادات غير المكتسبة 1 شهر"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_116
+#: model:account.account.template,name:l10n_me.account_account_template_116
+msgid "Accrued Expenses - Audit Fees"
+msgstr "المصاريف المستحقة - أتعاب التدقيق"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_117
+#: model:account.account.template,name:l10n_me.account_account_template_117
+msgid "Individual Income Tax - Employees"
+msgstr "ضريبة الدخل الفردي - الموظفين"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_118
+#: model:account.account.template,name:l10n_me.account_account_template_118
+msgid "Provision of National Contribution"
+msgstr "تقديم مساهمة وطنية"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_119
+#: model:account.account.template,name:l10n_me.account_account_template_119
+msgid "Provision Income Tax Company"
+msgstr "ضريبة الدخل المخصص للشركة"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_120
+#: model:account.account.template,name:l10n_me.account_account_template_120
+msgid "Income Tax Expense 5% Consultations Contracts"
+msgstr "مصاريف ضريبة الدخل 5٪ عقود الاستشارات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_121
+#: model:account.account.template,name:l10n_me.account_account_template_121
+msgid "Other Salaries 5% Consultations Contracts"
+msgstr "رواتب أخرى 5٪ عقود الاستشارات"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_122
+#: model:account.account.template,name:l10n_me.account_account_template_122
+msgid "Health Insurance Expense"
+msgstr "مصاريف التأمين الصحي"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_123
+#: model:account.account.template,name:l10n_me.account_account_template_123
+msgid "Water Expense"
+msgstr "مصروف مياه"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_124
+#: model:account.account.template,name:l10n_me.account_account_template_124
+msgid "Electricity Expense"
+msgstr "مصروف كهرباء"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_115
+#: model:account.account.template,name:l10n_me.account_account_template_115
+msgid "Employee Advances & Loans"
+msgstr "سلف الموظفين والقروض"
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_87
+#: model:account.account.template,name:l10n_me.account_account_template_87
+msgid "Write – Off"
+msgstr "مصاريف الشطب"
+
+#. module: l10n_me
+#: model:ir.model.fields,help:l10n_me.field_account_bank_statement_import_journal_creation__invoice_reference_type
+#: model:ir.model.fields,help:l10n_me.field_account_journal__invoice_reference_type
+msgid ""
+"You can set here the default communication that will appear on customer "
+"invoices, once validated, to help the customer to refer to that particular "
+"invoice when making the payment."
+msgstr ""
+"يمكنك من هنا تعيين وسيلة التواصل الافتراضية التي ستظهر على فواتير العميل "
+"بمجرد اعتمادها، لمساعدة العميل على العودة لتلك الفاتورة تحديدًا عند القيام "
+"بعملية السداد."
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_109
+#: model:account.account.template,name:l10n_me.account_account_template_109
+msgid "doubtful debt provision"
+msgstr ""
+
+#. module: l10n_me
+#: model:account.account,name:l10n_me.1_account_account_template_110
+#: model:account.account.template,name:l10n_me.account_account_template_110
+msgid "doubtful debt provision expenses"
+msgstr ""
