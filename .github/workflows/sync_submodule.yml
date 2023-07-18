@@ -3,7 +3,7 @@ name: Sync Submodule (Common)
 on:
   push:
     branches:
-      - main
+      - '16.0'
 
 jobs:
   sync:
