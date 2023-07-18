@@ -13,6 +13,6 @@ jobs:
       - name: Dispatch repository event
         uses: peter-evans/repository-dispatch@v1
         with:
-          token: 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
+          token: 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
           repository: muram-105/Test
           event-type: update-test-submodule
