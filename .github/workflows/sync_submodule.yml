@@ -26,5 +26,5 @@ jobs:
       - name: Commit and push changes
         run: |
           git commit -am "Sync submodule"
-          git remote set-url origin https://$TEST_REPO_TOKEN@github.com/muram-105/Common.git
+          git remote set-url origin https://$TEST_REPO_TOKEN@github.com/muram-105/Test.git
           git push
