@@ -22,8 +22,8 @@ jobs:
           cd $GITHUB_WORKSPACE/$COMMON_SUBMODULE_PATH
 
           # Update the submodule
-          git checkout main
-          git pull origin main
+          git checkout '16.0'
+          git pull origin '16.0'
 
           # Commit and push the submodule update
           git config --global user.email "muram8700@gmail.com"
@@ -31,4 +31,4 @@ jobs:
 
           git add .
           git commit -m "Update Common submodule" --no-verify
-          git push origin main
+          git push origin '16.0'
