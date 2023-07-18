@@ -1,4 +1,4 @@
-name: Sync Submodule (Common)
+name: Update Common Submodule
 
 on:
   push:
@@ -6,25 +6,29 @@ on:
       - '16.0'
 
 jobs:
-  sync:
+  update_test_submodule:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Git
+      - name: Update Test submodule
         run: |
-          git config --global user.name "muram-105"
+          # Determine the path of the Common submodule in the Test repository
+          COMMON_SUBMODULE_PATH=$(find . -type d -name "Common" | head -n 1)
+
+          # Change to the Common submodule directory
+          cd $GITHUB_WORKSPACE/$COMMON_SUBMODULE_PATH
+
+          # Update the submodule
+          git checkout main
+          git pull origin main
+
+          # Commit and push the submodule update
           git config --global user.email "muram8700@gmail.com"
+          git config --global user.name "muram-105"
 
-      - name: Update submodule
-        run: |
-          git submodule sync
-          git submodule update --recursive --remote
-
-      - name: Commit and push changes
-        run: |
-          git commit -am "Sync submodule"
-          git remote set-url origin https://$TEST_REPO_TOKEN@github.com/muram-105/Test.git
-          git push
+          git add .
+          git commit -m "Update Common submodule" --no-verify
+          git push origin main
