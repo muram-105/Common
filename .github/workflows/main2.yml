@@ -22,10 +22,10 @@ jobs:
           cd $GITHUB_WORKSPACE/$TEST_SUBMODULE_PATH
 
           # Update the submodule
-          git checkout main
+          git checkout '16.0'
           git pull
 
           # Commit and push the submodule update
           git add .
           git commit -m "Update Test submodule" --no-verify
-          git push origin main
+          git push origin '16.0'
