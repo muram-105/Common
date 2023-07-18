@@ -16,7 +16,7 @@ jobs:
       - name: Set up Git
         run: |
           git config --global user.name "muram-105"
-          git config --global user.email "your.email@example.com"
+          git config --global user.email "muram8700@gmail.com"
 
       - name: Update submodule
         run: |
