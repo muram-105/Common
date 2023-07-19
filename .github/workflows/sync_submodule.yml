@@ -11,4 +11,4 @@ jobs:
 
     steps:
       - name: Print Token
-        run: echo ${{ secrets.TEST_REPO_TOKEN }}
+        run: echo ${{ secrets.COMMON_REPO_TOKEN }}
