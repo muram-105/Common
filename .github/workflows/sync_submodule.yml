@@ -19,5 +19,6 @@ jobs:
           client-payload: |
             {
               "submodule": "Common",
+              "message": "Dispatch event from repo-b to repo-a",
               "commit": "${{ github.sha }}"
             }
