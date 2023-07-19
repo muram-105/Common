@@ -1,4 +1,4 @@
-name: Update Test Submodule
+name: Print Token
 
 on:
   push:
@@ -6,9 +6,9 @@ on:
       - '16.0'
 
 jobs:
-  update_test_submodule:
+  print_token:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Dispatch repository event
+      - name: Print Token
         run: echo ${{ secrets.TEST_REPO_TOKEN }}
