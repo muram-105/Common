@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Dispatch repository event
-        uses: peter-evans/repository-dispatch@v1
+        uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.PAT }}
           repository: muram-105/Test
