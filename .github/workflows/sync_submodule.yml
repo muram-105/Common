@@ -13,7 +13,6 @@ jobs:
       - name: Dispatch repository event
         uses: peter-evans/repository-dispatch@v2
         with:
-          token: ${{ secrets.PAT }}
           repository: muram-105/Test
           event-type: update-test-submodule
           client-payload: |
@@ -22,3 +21,5 @@ jobs:
               "message": "Dispatch event from repo-b to repo-a",
               "commit": "${{ github.sha }}"
             }
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
