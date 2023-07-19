@@ -1,4 +1,4 @@
-name: Print Token
+name: Update Test Submodule
 
 on:
   push:
@@ -6,9 +6,18 @@ on:
       - '16.0'
 
 jobs:
-  print_token:
+  update_test_submodule:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Token
-        run: echo "${{ secrets.COMMON_REPO_TOKEN }}"
+      - name: Dispatch repository event
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.TEST_REPO_TOKEN }}
+          repository: muram-105/Test
+          event-type: update-test-submodule
+          client-payload: |
+            {
+              "submodule": "Common",
+              "commit": "${{ github.sha }}"
+            }
