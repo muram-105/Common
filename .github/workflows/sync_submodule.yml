@@ -1,4 +1,4 @@
-name: Update Test Submodule
+name: Dispatch Workflow
 
 on:
   push:
@@ -6,27 +6,27 @@ on:
       - '16.0'
 
 jobs:
-  update_test_submodule:
+  dispatch_job:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16.x'
-
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Dispatch repository event
-        uses: peter-evans/repository-dispatch@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          repository: muram-105/Test
-          event-type: update-test-submodule
-          client-payload: |
-            {
-              "submodule": "Common",
-              "message": "Dispatch event from repo-b to repo-a",
-              "commit": "${{ github.sha }}"
-            }
+      - name: Dispatch Workflow in Another Repository
+        run: |
+          # Set your access token and the target repository name
+          ACCESS_TOKEN="${{ secrets.TEST_TOKEN }}"
+          TARGET_REPO="muram-105/Test"
+          
+          # Set the event type you want to trigger
+          EVENT_TYPE="update-test-submodule"
+          
+          # Dispatch the repository event using the GitHub API
+          curl -X POST \
+            -H "Authorization: token $ACCESS_TOKEN" \
+            -H "Accept: application/vnd.github.everest-preview+json" \
+            "https://api.github.com/repos/$TARGET_REPO/dispatches" \
+            -d "{\"event_type\": \"$EVENT_TYPE\"}"
+        env:
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.TEST_TOKEN }}
