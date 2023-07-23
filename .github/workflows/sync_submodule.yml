@@ -10,10 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
       - name: Dispatch repository event
         uses: peter-evans/repository-dispatch@v2
         with:
           repository: muram-105/Test
+          token: ${{ secrets.TEST_TOKEN }} # Replace with your personal access token
           event-type: update-test-submodule
           client-payload: |
             {
@@ -21,5 +25,3 @@ jobs:
               "message": "Dispatch event from repo-b to repo-a",
               "commit": "${{ github.sha }}"
             }
-        env:
-          GITHUB_TOKEN: ${{ secrets.TEST_TOKEN }}
