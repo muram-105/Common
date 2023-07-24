@@ -1,27 +1,22 @@
-name: Update Test Submodule
-
+name: Sync Repositories
 on:
   push:
     branches:
-      - '16.0'
+      - '16.0' # Adjust this based on your main branch name
 
 jobs:
-  update_test_submodule:
+  sync:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Check Out Repo-A
         uses: actions/checkout@v2
 
-      - name: Dispatch repository event
-        uses: peter-evans/repository-dispatch@v2
-        with:
-          repository: muram-105/Test
-          token: ${{ secrets.TEST_TOKEN }} # Replace with your personal access token
-          event-type: update-test-submodule
-          client-payload: |
-            {
-              "submodule": "Common",
-              "message": "Dispatch event from repo-b to repo-a",
-              "commit": "${{ github.sha }}"
-            }
+      - name: Sync Changes to Repo-B
+        run: |
+          git config --global user.email "muram8700@gmail.com"
+          git config --global user.name "muram-105"
+          git remote add repo-b https://github.com/muram-105/Test.git
+          git push Test HEAD:main
+        env:
+          REPO_B_PAT: ${{ secrets.TEST_TOKEN }}
