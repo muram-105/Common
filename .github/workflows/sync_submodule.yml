@@ -13,10 +13,11 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Sync Changes to Repo-B
+        env:
+          PAT_TOKEN: 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
         run: |
           git config --global user.email "muram8700@gmail.com"
           git config --global user.name "muram-105"
           git remote add repo-b https://github.com/muram-105/Test.git
           git push Test HEAD:main
-        env:
-          REPO_B_PAT: ${{ secrets.TEST_TOKEN }}
+
